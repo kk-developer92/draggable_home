@@ -48,7 +48,7 @@ class DraggableHome extends StatefulWidget {
   final double curvedBodyRadius;
 
   /// body: A widget to Body
-  final List<Widget> body;
+  final Widget body;
 
   /// fullyStretchable: Allows toggling of fully expand draggability of the DraggableHome. Set this to true to allow the user to fully expand the header.
   final bool fullyStretchable;
@@ -312,8 +312,7 @@ class _DraggableHomeState extends State<DraggableHome> {
               Column(
                 children: [
                   expandedUpArrow(),
-                  //Body
-                  ...widget.body
+                  widget.body
                 ],
               ),
             ],
